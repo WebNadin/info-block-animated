@@ -2,9 +2,9 @@
 @import "./css/font-awesome.min.css";
 @import "./css/styles.css";
 @import "./partials/_variables";
-
-
 body {
+  font-size: $font-size-base;
+  font-family: 'Roboto', sans-serif;
   a {
     color: yellow;
   }
@@ -12,9 +12,67 @@ body {
     color: green;
   }
 }
-
-.wrapper{
+.wrapper {
   background-color: $bg;
   width: 100vw;
   height: 100vh;
+}
+.player {
+  position: absolute;
+  left: 2em;
+  bottom: 4em;
+  width: 580px;
+  display: flex;
+  flex-flow: row wrap;
+  &__avatar {
+    width: 35%;
+    height: 35%;
+    background-color: $first;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $first;
+    width: 50%;
+    height: 3.1em;
+    display: flex;
+    align-self: flex-end;
+  }
+  &__team {
+    background-color: $first;
+    color: $second;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-big;
+    line-height: $font-size-big;
+    padding: 32px 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+}
+.title {
+  box-sizing: border-box;
+  border: 1px solid black;
+  &__divider {
+    border: 1px solid black;
+  }
+  &__text {
+    background-color: $success;
+    font-size: $font-size-big;
+    font-weight: bold;
+    line-height: $font-size-big;
+    padding: 7px 20px;
+    width: 100%;
+  }
+}
+.divider {
+  box-sizing: border-box;
+  background-color: $warning;
+  width: 6px;
 }
