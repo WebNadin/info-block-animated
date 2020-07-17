@@ -5,37 +5,48 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-    './app/app.js', 
-  	'./styles/main.scss'
+    './app/app.js',
+    './styles/main.scss'
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
   module: {
-  	rules: [
+    rules: [
       {
-  			test: /\.hbs$/,
-  			use: 'handlebars-loader'
-  		},
-  		{
-  			test: /\.(sass|scss)$/,
-  			use: ExtractTextPlugin.extract(['css-loader?url=false', 'sass-loader'])
-  		}
-  	]
+        test: /\.hbs$/,
+        use: 'handlebars-loader'
+      },
+      {
+        test: /\.(sass|scss)$/,
+        use: ExtractTextPlugin.extract(['css-loader?url=false', 'sass-loader'])
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images'
+            }
+          }
+        ]
+      }
+    ]
   },
   plugins: [
-  	new webpack.ProvidePlugin({
-  		$: 'jquery',
-  		jQuery: 'jquery'
-  	}),
-  	new webpack.ProvidePlugin({
-  		algoliasearch: 'algoliasearch'
-  	}),
-  	new ExtractTextPlugin({
-  		filename: 'bundle.css',
-  		allChunks: true
-  	}),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
+    new webpack.ProvidePlugin({
+      algoliasearch: 'algoliasearch'
+    }),
+    new ExtractTextPlugin({
+      filename: 'bundle.css',
+      allChunks: true
+    }),
     new HtmlWebpackPlugin({
       template: 'templates/index.hbs',
       filename: 'index.html'

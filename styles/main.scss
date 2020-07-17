@@ -1,6 +1,7 @@
 @import "./css/normalize.css";
 @import "./css/font-awesome.min.css";
 @import "./css/styles.css";
+@import "./partials/_variables";
 
 
 body {
@@ -10,4 +11,10 @@ body {
   p {
     color: green;
   }
+}
+
+.wrapper{
+  background-color: $bg;
+  width: 100vw;
+  height: 100vh;
 }
