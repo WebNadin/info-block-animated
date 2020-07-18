@@ -3,7 +3,7 @@
 
  ![Website working gif](https://github.com/WebNadin/info-block-animated/blob/master/readme-img.gif)
 
- Website link: [webnadin.inf.ua/animated-info-block](http://http://webnadin.inf.ua/animated-info-block/)
+ Website link: [webnadin.inf.ua/animated-info-block](http://webnadin.inf.ua/animated-info-block/)
 
  In this project I mastered:
  - Webpack (sass + handlebars + dev server boilerplate)
