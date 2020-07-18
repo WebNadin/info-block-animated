@@ -2,6 +2,7 @@
 ( GSAP + Webpack + SASS + Handlebars + Dev Server Boilerplate )
 
  ![Website working gif](https://github.com/WebNadin/info-block-animated/blob/master/readme-img.gif)
+
  Website link: [webnadin.inf.ua/animated-info-block](http://http://webnadin.inf.ua/kill-the-shape/)
 
  In this project I mastered:
