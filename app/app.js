@@ -1,9 +1,8 @@
-require('./search');
+require('./player');
 
 class Player {
 
   init() {
-    console.log('init');
     this.showBlocks();
 
     gsap.to(".js-playerAvatar", {duration: 1, delay: 2.3, onComplete: this.hideText});
