@@ -1,13 +1,109 @@
 @import "./css/normalize.css";
 @import "./css/font-awesome.min.css";
 @import "./css/styles.css";
-
-
+@import "./partials/_variables";
 body {
+  font-size: $font-size-base;
+  font-family: 'Roboto', sans-serif;
   a {
     color: yellow;
   }
   p {
     color: green;
+  }
+}
+.wrapper {
+  background-color: $bg;
+  width: 100vw;
+  height: 100vh;
+}
+.player {
+  position: absolute;
+  left: 2em;
+  bottom: 4em;
+  width: 580px;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+  &__avatar {
+    width: 35%;
+    height: 35%;
+  }
+  &__title {
+    width: 50%;
+    height: 3.1em;
+    align-self: flex-end;
+  }
+  &__team {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+.title {
+  background-color: $success;
+  display: flex;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $first;
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 100%;
+  &_animated {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  &__divider {
+    border: 1px solid black;
+  }
+  &__text {
+    box-sizing: border-box;
+    font-size: $font-size-big;
+    font-weight: bold;
+    line-height: $font-size-big;
+    margin: 7px 20px;
+    width: 100%;
+  }
+}
+.avatar {
+  background-color: $first;
+  &_animated {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  img {
+    display: block;
+    width: 100%;
+    opacity: 0;
+  }
+}
+.animatedBlockWrapper {
+  overflow: hidden;
+}
+.divider {
+  box-sizing: border-box;
+  background-color: $warning;
+  width: 7px;
+}
+.team {
+  background-color: $first;
+  color: $second;
+  font-size: $font-size-big;
+  line-height: $font-size-big;
+  box-sizing: border-box;
+  font-weight: bold;
+  letter-spacing: 2px;
+  width: 100%;
+  &_animated {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  &__text {
+    margin: 32px 20px;
+  }
+}
+.text {
+  &_animated {
+    transform: translateY(-100px);
   }
 }

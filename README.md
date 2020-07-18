@@ -1,24 +1,42 @@
-Webpack + SASS + Handlebars + Dev Server Boilerplate
-==================
+ # Simple animated info block
+( GSAP + Webpack + SASS + Handlebars + Dev Server Boilerplate )
 
-To get started run:
-`npm install`
+ ![Website working gif](https://github.com/WebNadin/info-block-animated/blob/master/readme-img.gif)
+ Website link: [webnadin.inf.ua/animated-info-block](http://http://webnadin.inf.ua/kill-the-shape/)
 
-The _SASS/SCSS_ code goes inside the styles directory.
+ In this project I mastered:
+ - Webpack (sass + handlebars + dev server boilerplate)
+ - Handlebars variables and templates
+ - GSAP
 
-The _JS_ code goes inside the app directory.
+### Installation
 
-The _Handlebars_ files goes inside the templates directory.
+You could follow next steps to deploy a local project:
+ - clone branch `master` with `git clone https://github.com/WebNadin/info-block-animated/.git` or fork it and then clone it from your forked repo
+ ```
+npm install
+```
+The SASS/SCSS code goes inside the styles directory.
 
-**Changes in real time**
+The JS code goes inside the app directory.
 
-1. Start the _Webpack Dev Server_:
-`npm run dev`
+The Handlebars files goes inside the templates directory.
 
-2. Go to the url:
-`http://localhost:8080/webpack-dev-server/`
+ - Start the _Webpack Dev Server_:
+ ```
+npm run dev
+```
 
-3. Start to code and see the magic happens.
+ - Go to the url:
+`http://localhost:8080`
 
-4. After you finish the development, run the next command to have all your code available and minified in your build directory:
-`npm run build`
+ - Start to code and see the magic happens.
+
+ -  After you finish the development, run the next command to have all your code available and minified in your build directory:
+ ```
+npm run build
+```
+License
+----
+
+WebNadin
